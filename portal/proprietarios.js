@@ -46,7 +46,24 @@ const PROPRIETARIOS = {
       }
     ]
   },
-
+// ── FÁTIMA ─────────────────────────────────────────────────
+  "fatima": {
+    nome: "Fátima",
+    email: "ma1lima@hotmail.com",
+    senha: "Booking@1503BCM",
+    imoveis: [
+      {
+        codigo: "KH01J",
+        nome: "BCM 1503",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KH01J",
+        airbnb: "",
+        booking: "",
+        decolar: "",
+        vistoria: "",
+        investidor: ""
+      }
+    ]
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "carlos": {
   //   nome: "Carlos",
