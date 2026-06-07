@@ -22,16 +22,9 @@
     .header-text { text-align: center; }
     .header-text h1 { font-size: 1.1rem; font-weight: 600; color: var(--teal-dark); }
     .header-text p { font-size: .8rem; color: var(--muted); margin-top: 2px; }
-
-    /* Seletor de imóvel (quando tem mais de 1) */
     .selector { max-width: 720px; margin: 30px auto 0; padding: 0 20px; }
     .selector-title { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: var(--muted); margin-bottom: 12px; }
-    .apto-btn {
-      display: flex; align-items: center; gap: 14px; padding: 16px 20px;
-      background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow);
-      text-decoration: none; margin-bottom: 10px;
-      transition: transform .15s, box-shadow .15s;
-    }
+    .apto-btn { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); text-decoration: none; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; }
     .apto-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(42,173,164,.16); }
     .apto-btn.active { border: 2px solid var(--teal); }
     .apto-btn .code { background: var(--teal); color: #fff; border-radius: 7px; padding: 6px 12px; font-size: .8rem; font-weight: 700; flex-shrink: 0; }
@@ -39,8 +32,6 @@
     .apto-btn .info .nome { font-size: .95rem; font-weight: 700; color: var(--black); }
     .apto-btn .info .end { font-size: .76rem; color: var(--muted); margin-top: 2px; }
     .apto-btn .arr { color: var(--teal); }
-
-    /* Cards de conteúdo */
     .container { max-width: 720px; margin: 30px auto 0; padding: 0 20px; display: flex; flex-direction: column; gap: 22px; }
     .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
     .card-header { display: flex; align-items: center; gap: 10px; padding: 16px 22px 14px; border-bottom: 1px solid var(--border); }
@@ -51,11 +42,7 @@
     .info-row { display: flex; flex-direction: column; gap: 3px; }
     .info-row label { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
     .info-row .value { font-size: .95rem; font-weight: 500; word-break: break-all; }
-    .link-btn {
-      display: flex; align-items: center; gap: 12px; padding: 14px 18px;
-      border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .88rem;
-      transition: opacity .15s, transform .1s; border: none; cursor: pointer;
-    }
+    .link-btn { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .88rem; transition: opacity .15s, transform .1s; border: none; cursor: pointer; }
     .link-btn:hover { opacity: .88; transform: translateY(-1px); }
     .link-btn .btn-icon { width: 32px; height: 32px; border-radius: 7px; background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
     .link-btn .btn-label { flex: 1; }
@@ -79,7 +66,6 @@
     .investor-card p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.4; }
     footer { max-width: 720px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
     footer a { color: var(--teal); text-decoration: none; }
-
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
     .toast.show { transform: translateX(-50%) translateY(0); }
     .hidden { display: none !important; }
@@ -87,7 +73,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <img src="../logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
     <div class="header-text">
@@ -96,15 +81,11 @@
     </div>
   </header>
 
-
-
-  <!-- Seletor de imóvel -->
   <div class="selector hidden" id="selector">
     <div class="selector-title">Selecione o apartamento</div>
     <div id="apto-lista"></div>
   </div>
 
-  <!-- Conteúdo do imóvel selecionado -->
   <div class="container hidden" id="conteudo"></div>
 
   <footer>
@@ -118,7 +99,6 @@
 
   <script src="../proprietarios.js"></script>
   <script>
-    // Pega o slug da URL: /proprietario/bruna → "bruna"
     const slug = location.pathname.replace(/\/$/, '').split('/').pop();
     const p = PROPRIETARIOS[slug];
 
@@ -132,11 +112,10 @@
       if (p.imoveis.length === 1) {
         renderImovel(p.imoveis[0], p);
       } else {
-        // Mostra seletor
         const selector = document.getElementById('selector');
         const lista = document.getElementById('apto-lista');
         selector.classList.remove('hidden');
-        p.imoveis.forEach((im, i) => {
+        p.imoveis.forEach((im) => {
           const btn = document.createElement('a');
           btn.className = 'apto-btn';
           btn.href = '#';
@@ -155,7 +134,6 @@
           });
           lista.appendChild(btn);
         });
-        // Seleciona o primeiro automaticamente
         lista.querySelector('.apto-btn').click();
       }
     }
@@ -209,14 +187,6 @@
 
         <div class="card">
           <div class="card-header">
-            <div class="icon" style="background:#E6F5F4;color:#1E8A84;">🔗</div>
-            <div><h2>Links do Anúncio</h2><div class="subtitle">Acesse o imóvel nos portais de reservas</div></div>
-          </div>
-          <div class="card-body">${linksAnuncio}</div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
             <div class="icon" style="background:#E6F5F4;color:#156460;">📊</div>
             <div><h2>Painel do Proprietário</h2><div class="subtitle">Acesse reservas, calendário e rendimentos</div></div>
           </div>
@@ -245,9 +215,16 @@
           </div>
         </div>
 
-        ${investidor}`;
+        ${investidor}
 
-      // Scroll suave para o conteúdo
+        <div class="card">
+          <div class="card-header">
+            <div class="icon" style="background:#E6F5F4;color:#1E8A84;">🔗</div>
+            <div><h2>Links do Anúncio</h2><div class="subtitle">Acesse o imóvel nos portais de reservas</div></div>
+          </div>
+          <div class="card-body">${linksAnuncio}</div>
+        </div>`;
+
       c.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
