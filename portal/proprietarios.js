@@ -64,7 +64,8 @@ const PROPRIETARIOS = {
         investidor: ""
       }
     ]
-  // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
+},
+    // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "carlos": {
   //   nome: "Carlos",
   //   email: "carlos@email.com",
