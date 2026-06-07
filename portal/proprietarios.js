@@ -65,6 +65,25 @@ const PROPRIETARIOS = {
       }
     ]
 },
+  // ── RODRIGO ────────────────────────────────────────────────
+  "rodrigo": {
+    nome: "Rodrigo",
+    email: "rodrigo@rvianarep.com.br",
+    senha: "Booking@2001",
+    imoveis: [
+      {
+        codigo: "JS01J",
+        nome: "BCM 2001",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/JS01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1684764851204719130?guests=1&adults=1&s=67&unique_share_id=8c32f0a2-9471-43c8-9a7d-9e757a31c622",
+        booking: "",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/13lI4um4MTclmoqbmo-WtY_mip7qXD4p6?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/0c7f3c045e064ca1bbd63829dcb1f342"
+      }
+    ]
+  },
     // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "carlos": {
   //   nome: "Carlos",
