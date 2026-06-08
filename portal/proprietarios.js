@@ -6,7 +6,7 @@
 const PROPRIETARIOS = {
 
   // ── BRUNA ──────────────────────────────────────────────────
-  "bruna": {
+  "bruna-fs": {
     nome: "Bruna FS",
     email: "brunanegociotrabalho@gmail.com",
     senha: "Booking@BrunaFS1",
