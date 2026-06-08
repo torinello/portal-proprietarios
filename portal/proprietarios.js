@@ -47,8 +47,8 @@ const PROPRIETARIOS = {
     ]
   },
 // ── FÁTIMA ─────────────────────────────────────────────────
-  "fatima": {
-    nome: "Fátima",
+  "fatima-bcm": {
+    nome: "Fátima BCM",
     email: "ma1lima@hotmail.com",
     senha: "Booking@1503BCM",
     imoveis: [
@@ -66,8 +66,8 @@ const PROPRIETARIOS = {
     ]
 },
   // ── RODRIGO ────────────────────────────────────────────────
-  "rodrigo": {
-    nome: "Rodrigo",
+  "rodrigo-bcm": {
+    nome: "Rodrigo BCM",
     email: "rodrigo@rvianarep.com.br",
     senha: "Booking@2001",
     imoveis: [
