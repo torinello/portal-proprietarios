@@ -57,11 +57,11 @@ const PROPRIETARIOS = {
         nome: "BCM 1503",
         endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
         holidaystays: "https://www.holidaystays.net/pt/apartment/KH01J",
-        airbnb: "",
-        booking: "",
+        airbnb: "https://www.airbnb.com.br/rooms/1704546557142218582?guests=1&adults=1&s=67&unique_share_id=4a2e4328-4701-475b-8f37-710ba9e66f7c",
+        booking: "https://www.booking.com/Share-YYwpl7",
         decolar: "",
         vistoria: "",
-        investidor: ""
+        investidor: "https://v2.bookalyze.it/owner/ddd525c2291c4c5988818249605b4159"
       }
     ]
 },
