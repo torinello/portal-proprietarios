@@ -68,14 +68,13 @@
     footer a { color: var(--teal); text-decoration: none; }
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
     .toast.show { transform: translateX(-50%) translateY(0); }
-    .login-guide { margin-top: 4px; }
-    .login-guide summary { cursor: pointer; font-size: .8rem; font-weight: 600; color: var(--teal-dark); padding: 8px 12px; background: var(--teal-light); border-radius: 8px; list-style: none; display: flex; align-items: center; gap: 6px; user-select: none; }
-    .login-guide summary::-webkit-details-marker { display: none; }
-    .login-guide summary::before { content: '▶'; font-size: .65rem; transition: transform .2s; }
-    .login-guide[open] summary::before { transform: rotate(90deg); }
-    .login-guide-body { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
-    .login-step { display: flex; align-items: flex-start; gap: 10px; font-size: .83rem; color: var(--text); line-height: 1.45; }
-    .login-step .step-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+    .login-info-box { margin-top: 4px; background: var(--teal-light); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+    .login-info-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
+    .login-info-header .info-badge { width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: #fff; font-size: .75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .login-info-header span { font-size: .82rem; font-weight: 700; color: var(--teal-dark); }
+    .login-info-body { padding: 0 14px 12px; display: flex; flex-direction: column; gap: 7px; }
+    .login-step { display: flex; align-items: flex-start; gap: 9px; font-size: .82rem; color: var(--text); line-height: 1.45; }
+    .login-step .step-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
     .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
     .hidden { display: none !important; }
     @media (max-width: 500px) { header { padding: 20px 18px; } .container { padding: 0 14px; } .cred-grid { grid-template-columns: 1fr; } .selector { padding: 0 14px; } }
@@ -208,16 +207,19 @@
                 </div>
               </div>
             </div>
-            <details class="login-guide">
-              <summary>Como fazer login passo a passo</summary>
-              <div class="login-guide-body">
+            <div class="login-info-box">
+              <div class="login-info-header">
+                <div class="info-badge">i</div>
+                <span>Instruções de acesso ao painel</span>
+              </div>
+              <div class="login-info-body">
                 <div class="login-step"><span class="step-icon">🌐</span><span>Acesse <a href="https://www.holidaystays.net/" target="_blank">www.holidaystays.net</a></span></div>
                 <div class="login-step"><span class="step-icon">🧑‍💼</span><span>Clique em <strong>"Painel do Proprietário"</strong> — você será redirecionado para a página de Login e Cadastrar.</span></div>
                 <div class="login-step"><span class="step-icon">🔑</span><span>Clique em <strong>"Login"</strong> e insira o e-mail e a senha acima.</span></div>
-                <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Você estará logado. Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
-                <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar suas reservas, calendário e rendimentos.</span></div>
+                <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
+                <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar reservas, calendário e rendimentos.</span></div>
               </div>
-            </details>
+            </div>
           </div>
         </div>
         ${investidor}
