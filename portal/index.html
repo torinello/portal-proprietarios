@@ -61,6 +61,14 @@
     .investor-card { background: var(--teal-light); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 14px; }
     .investor-card .inv-icon { font-size: 2rem; flex-shrink: 0; }
     .investor-card p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.4; }
+    .login-info-box { background: var(--teal-light); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+    .login-info-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
+    .login-info-header .info-badge { width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: #fff; font-size: .75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .login-info-header span { font-size: .82rem; font-weight: 700; color: var(--teal-dark); }
+    .login-info-body { padding: 0 14px 12px; display: flex; flex-direction: column; gap: 7px; }
+    .login-step { display: flex; align-items: flex-start; gap: 9px; font-size: .82rem; color: var(--text); line-height: 1.45; }
+    .login-step .step-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
     footer { max-width: 720px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
     footer a { color: var(--teal); text-decoration: none; }
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
@@ -194,6 +202,19 @@
                   <span id="cred-pass">${p.senha}</span>
                   <button class="copy-btn" onclick="copyText('cred-pass')" title="Copiar">📋</button>
                 </div>
+              </div>
+            </div>
+            <div class="login-info-box">
+              <div class="login-info-header">
+                <div class="info-badge">i</div>
+                <span>Instruções de acesso ao painel</span>
+              </div>
+              <div class="login-info-body">
+                <div class="login-step"><span class="step-icon">🌐</span><span>Acesse <a href="https://www.holidaystays.net/" target="_blank">www.holidaystays.net</a></span></div>
+                <div class="login-step"><span class="step-icon">🧑‍💼</span><span>Clique em <strong>"Painel do Proprietário"</strong> — você será redirecionado para a página de Login e Cadastrar.</span></div>
+                <div class="login-step"><span class="step-icon">🔑</span><span>Clique em <strong>"Login"</strong> e insira o e-mail e a senha acima.</span></div>
+                <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
+                <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar reservas, calendário e rendimentos.</span></div>
               </div>
             </div>
           </div>
