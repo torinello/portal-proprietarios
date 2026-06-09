@@ -68,6 +68,15 @@
     footer a { color: var(--teal); text-decoration: none; }
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
     .toast.show { transform: translateX(-50%) translateY(0); }
+    .login-guide { margin-top: 4px; }
+    .login-guide summary { cursor: pointer; font-size: .8rem; font-weight: 600; color: var(--teal-dark); padding: 8px 12px; background: var(--teal-light); border-radius: 8px; list-style: none; display: flex; align-items: center; gap: 6px; user-select: none; }
+    .login-guide summary::-webkit-details-marker { display: none; }
+    .login-guide summary::before { content: '▶'; font-size: .65rem; transition: transform .2s; }
+    .login-guide[open] summary::before { transform: rotate(90deg); }
+    .login-guide-body { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+    .login-step { display: flex; align-items: flex-start; gap: 10px; font-size: .83rem; color: var(--text); line-height: 1.45; }
+    .login-step .step-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+    .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
     .hidden { display: none !important; }
     @media (max-width: 500px) { header { padding: 20px 18px; } .container { padding: 0 14px; } .cred-grid { grid-template-columns: 1fr; } .selector { padding: 0 14px; } }
   </style>
@@ -80,35 +89,28 @@
       <p id="header-sub">Carregando...</p>
     </div>
   </header>
-
   <div class="selector hidden" id="selector">
     <div class="selector-title">Selecione o apartamento</div>
     <div id="apto-lista"></div>
   </div>
-
   <div class="container hidden" id="conteudo"></div>
-
   <footer>
     <p>📞 <a href="tel:+558535145116">(85) 3514-5116</a> &nbsp;|&nbsp;
        📱 <a href="https://wa.me/558535145116" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
        ✉️ <a href="mailto:info@bookingfortaleza.com">info@bookingfortaleza.com</a></p>
     <p style="margin-top:10px; color:#9AAAB8;">© Holiday Stays · Grupo Booking Fortaleza LTDA</p>
   </footer>
-
   <div class="toast" id="toast">✓ Copiado!</div>
-
   <script src="../proprietarios.js"></script>
   <script>
     const slug = location.pathname.replace(/\/$/, '').split('/').pop();
     const p = PROPRIETARIOS[slug];
-
     if (!p) {
       document.getElementById('header-title').textContent = 'Proprietário não encontrado';
       document.getElementById('header-sub').textContent = 'Verifique o link recebido';
     } else {
       document.getElementById('header-title').textContent = `Olá, ${p.nome}! 👋`;
       document.getElementById('header-sub').textContent = `${p.imoveis.length} imóvel${p.imoveis.length > 1 ? 'eis' : ''} cadastrado${p.imoveis.length > 1 ? 's' : ''}`;
-
       if (p.imoveis.length === 1) {
         renderImovel(p.imoveis[0], p);
       } else {
@@ -137,18 +139,15 @@
         lista.querySelector('.apto-btn').click();
       }
     }
-
     function renderImovel(im, p) {
       const c = document.getElementById('conteudo');
       c.classList.remove('hidden');
-
       const linkBtn = (cls, icon, label, sub, href) =>
         href ? `<a class="link-btn ${cls}" href="${href}" target="_blank">
           <div class="btn-icon">${icon}</div>
           <div class="btn-label">${label}<small>${sub}</small></div>
           <span class="arrow">↗</span>
         </a>` : '';
-
       const linksAnuncio = [
         linkBtn('btn-hs',      '🌐', 'Ver no site Holiday Stays', 'holidaystays.net', im.holidaystays),
         linkBtn('btn-airbnb',  '🏡', 'Ver no Airbnb',             'airbnb.com.br',    im.airbnb),
@@ -156,7 +155,6 @@
         linkBtn('btn-decolar', '✈️', 'Ver no Decolar',            'decolar.com',      im.decolar),
         linkBtn('btn-video',   '🎥', 'Vídeo de Vistoria',         'Google Drive',     im.vistoria),
       ].filter(Boolean).join('');
-
       const investidor = im.investidor ? `
         <div class="card">
           <div class="card-header">
@@ -171,7 +169,6 @@
             ${linkBtn('btn-investor', '💼', 'Acessar Portal do Investidor', `Dashboard · ${im.nome}`, im.investidor)}
           </div>
         </div>` : '';
-
       c.innerHTML = `
         <div class="card">
           <div class="card-header">
@@ -184,7 +181,6 @@
             <div class="info-row"><label>Localização</label><div class="value">${im.endereco}</div></div>
           </div>
         </div>
-
         <div class="card">
           <div class="card-header">
             <div class="icon" style="background:#E6F5F4;color:#156460;">📊</div>
@@ -212,11 +208,19 @@
                 </div>
               </div>
             </div>
+            <details class="login-guide">
+              <summary>Como fazer login passo a passo</summary>
+              <div class="login-guide-body">
+                <div class="login-step"><span class="step-icon">🌐</span><span>Acesse <a href="https://www.holidaystays.net/" target="_blank">www.holidaystays.net</a></span></div>
+                <div class="login-step"><span class="step-icon">🧑‍💼</span><span>Clique em <strong>"Painel do Proprietário"</strong> — você será redirecionado para a página de Login e Cadastrar.</span></div>
+                <div class="login-step"><span class="step-icon">🔑</span><span>Clique em <strong>"Login"</strong> e insira o e-mail e a senha acima.</span></div>
+                <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Você estará logado. Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
+                <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar suas reservas, calendário e rendimentos.</span></div>
+              </div>
+            </details>
           </div>
         </div>
-
         ${investidor}
-
         <div class="card">
           <div class="card-header">
             <div class="icon" style="background:#E6F5F4;color:#1E8A84;">🔗</div>
@@ -224,10 +228,8 @@
           </div>
           <div class="card-body">${linksAnuncio}</div>
         </div>`;
-
       c.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-
     function copyText(id) {
       const text = document.getElementById(id).textContent.trim();
       navigator.clipboard.writeText(text).then(() => {
