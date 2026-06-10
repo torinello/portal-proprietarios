@@ -79,7 +79,7 @@ const PROPRIETARIOS = {
         endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
         holidaystays: "https://www.holidaystays.net/pt/apartment/JS01J",
         airbnb: "https://www.airbnb.com.br/rooms/1684764851204719130?guests=1&adults=1&s=67&unique_share_id=8c32f0a2-9471-43c8-9a7d-9e757a31c622",
-        booking: "",
+        booking: "https://www.booking.com/Share-YYwpl7",
         decolar: "",
         vistoria: "https://drive.google.com/drive/folders/13lI4um4MTclmoqbmo-WtY_mip7qXD4p6?usp=sharing",
         investidor: "https://v2.bookalyze.it/owner/0c7f3c045e064ca1bbd63829dcb1f342"
@@ -99,7 +99,7 @@ const PROPRIETARIOS = {
         endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
         holidaystays: "https://www.holidaystays.net/pt/apartment/KO01J",
         airbnb: "https://...",
-        booking: "",
+        booking: "https://www.booking.com/Share-YYwpl7",
         decolar: "",
         vistoria: "https://...",
         investidor: "https://v2.bookalyze.it/owner/c6ef8c8b9a7d42a9a292df808f297676"
