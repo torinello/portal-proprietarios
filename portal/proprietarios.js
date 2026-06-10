@@ -111,4 +111,19 @@ const PROPRIETARIOS = {
   // "carlos": {
   //   nome: "Carlos",
   //   email: "carlos@email.com",
-  //
+  //   senha: "Booking@Carlos1",
+  //   imoveis: [
+  //     {
+  //       codigo: "AB01J",
+  //       nome: "Nome do Imóvel",
+  //       endereco: "Endereço completo",
+  //       holidaystays: "https://...",
+  //       airbnb: "https://...",
+  //       booking: "",
+  //       decolar: "",
+  //       vistoria: "https://...",
+  //       investidor: ""
+  //     }
+  //   ]
+  // },
+};
