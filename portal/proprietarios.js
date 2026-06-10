@@ -170,26 +170,25 @@ const PROPRIETARIOS = {
       }
     ]
   },
-    // ── NIJNI YURI CARVALHO FARIAS ───────────────────────
-  "NIJNI YURI": {
-  nome: "Yuri",
-  email: "nijni_farias@hotmail.com",
-  senha: "Booking@706BCM",
-  imoveis: [
-    {
-  codigo: "KO01J",
-  nome: "BCM 706",
-  endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",   
-  holidaystays: "https://www.holidaystays.net/pt/apartment/KO01J",
-  airbnb: "https://...",
-  booking: "",
-  decolar: "",
-  vistoria: "https://...",
-  investidor: "https://v2.bookalyze.it/owner/c6ef8c8b9a7d42a9a292df808f297676"
-  }   
-  ]
- },
-
+    // ── NIJNI YURI CARVALHO FARIAS ──────────────────────────────
+  "yuri-bcm": {
+    nome: "Yuri",
+    email: "nijni_farias@hotmail.com",
+    senha: "Booking@706BCM",
+    imoveis: [
+      {
+        codigo: "KO01J",
+        nome: "BCM 706",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KO01J",
+        airbnb: "https://...",
+        booking: "",
+        decolar: "",
+        vistoria: "https://...",
+        investidor: "https://v2.bookalyze.it/owner/c6ef8c8b9a7d42a9a292df808f297676"
+      }
+    ]
+  },
 };
     // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "carlos": {
