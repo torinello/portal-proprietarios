@@ -101,7 +101,7 @@ const PROPRIETARIOS = {
         airbnb: "https://www.airbnb.com.br/rooms/1705048523842252177?guests=1&adults=1&s=67&unique_share_id=27a5edf5-7b6a-44c0-8be5-a06abcd18e9f",
         booking: "https://www.booking.com/Share-YYwpl7",
         decolar: "",
-        vistoria: "https://...",
+        vistoria: "https://drive.google.com/drive/folders/1fKpYsCOWy6X9vquZe_g0QrWudW4v-Wsx?usp=sharing",
         investidor: "https://v2.bookalyze.it/owner/c6ef8c8b9a7d42a9a292df808f297676"
       }
     ]
