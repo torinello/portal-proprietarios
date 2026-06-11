@@ -2,12 +2,10 @@
 //  PORTAL DO PROPRIETÁRIO · Holiday Stays
 //  Edite este arquivo para adicionar ou alterar proprietários
 // ============================================================
-
 const PROPRIETARIOS = {
-
   // ── BRUNA ──────────────────────────────────────────────────
-  "bruna-fs": {
-    nome: "Bruna FS",
+  "bruna": {
+    nome: "Bruna",
     email: "brunanegociotrabalho@gmail.com",
     senha: "Booking@BrunaFS1",
     imoveis: [
@@ -48,8 +46,8 @@ const PROPRIETARIOS = {
   },
 
   // ── FÁTIMA ─────────────────────────────────────────────────
-  "fatima-bcm": {
-    nome: "Fátima BCM",
+  "fatima": {
+    nome: "Fátima",
     email: "ma1lima@hotmail.com",
     senha: "Booking@1503BCM",
     imoveis: [
@@ -58,18 +56,18 @@ const PROPRIETARIOS = {
         nome: "BCM 1503",
         endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
         holidaystays: "https://www.holidaystays.net/pt/apartment/KH01J",
-        airbnb: "https://www.airbnb.com.br/rooms/1704546557142218582?guests=1&adults=1&s=67&unique_share_id=4a2e4328-4701-475b-8f37-710ba9e66f7c",
-        booking: "https://www.booking.com/Share-YYwpl7",
+        airbnb: "",
+        booking: "",
         decolar: "",
-        vistoria: "https://drive.google.com/drive/folders/1JxBxPFCdy9oMkQOo6wi1pVhRnlLeMSle?usp=sharing",
-        investidor: "https://v2.bookalyze.it/owner/ddd525c2291c4c5988818249605b4159"
+        vistoria: "",
+        investidor: ""
       }
     ]
   },
 
   // ── RODRIGO ────────────────────────────────────────────────
-  "rodrigo-bcm": {
-    nome: "Rodrigo BCM",
+  "rodrigo": {
+    nome: "Rodrigo",
     email: "rodrigo@rvianarep.com.br",
     senha: "Booking@2001",
     imoveis: [
@@ -79,7 +77,7 @@ const PROPRIETARIOS = {
         endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
         holidaystays: "https://www.holidaystays.net/pt/apartment/JS01J",
         airbnb: "https://www.airbnb.com.br/rooms/1684764851204719130?guests=1&adults=1&s=67&unique_share_id=8c32f0a2-9471-43c8-9a7d-9e757a31c622",
-        booking: "https://www.booking.com/Share-YYwpl7",
+        booking: "",
         decolar: "",
         vistoria: "https://drive.google.com/drive/folders/13lI4um4MTclmoqbmo-WtY_mip7qXD4p6?usp=sharing",
         investidor: "https://v2.bookalyze.it/owner/0c7f3c045e064ca1bbd63829dcb1f342"
@@ -87,22 +85,66 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── YURI ───────────────────────────────────────────────────
-  "yuri-bcm": {
-    nome: "Yuri",
-    email: "nijni_farias@hotmail.com",
-    senha: "Booking@706BCM",
+  // ── JOÃO RIBEIRO BARROSO ───────────────────────────────────
+  "joao": {
+    nome: "João Ribeiro Barroso",
+    email: "rosa@engexata.com.br",
+    senha: "",
     imoveis: [
       {
-        codigo: "KO01J",
-        nome: "BCM 706",
-        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
-        holidaystays: "https://www.holidaystays.net/pt/apartment/KO01J",
-        airbnb: "https://www.airbnb.com.br/rooms/1705048523842252177?guests=1&adults=1&s=67&unique_share_id=27a5edf5-7b6a-44c0-8be5-a06abcd18e9f",
-        booking: "https://www.booking.com/Share-YYwpl7",
-        decolar: "",
-        vistoria: "https://drive.google.com/drive/folders/1fKpYsCOWy6X9vquZe_g0QrWudW4v-Wsx?usp=sharing",
-        investidor: "https://v2.bookalyze.it/owner/c6ef8c8b9a7d42a9a292df808f297676"
+        codigo: "UD02I",
+        nome: "FS 410 A",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/UD02I",
+        airbnb: "https://www.airbnb.com.br/rooms/1388310823335150325?guests=1&adults=1&s=67&unique_share_id=23f3a522-c1d2-4783-b6f1-a7d9067798ba",
+        booking: "https://www.booking.com/hotel/br/fortaleza-sul-alto-padrao.pt-br.html",
+        decolar: "https://www.decolar.com/accommodations/detail/6298258/2026-06-23/2026-06-26/2?user_searched_gid=CIT_2302&selected_room_pack=217005905&searchId=1f71ce26-5e65-4bd5-978a-52c3288e9ead&throughResults=true&fromViewMode=hybrid&viewModeSubclassification=hybrid-list&isMapCommanding=true&currency=BRL",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/18602e1be017421a95197eb6b17eee32"
+      },
+      {
+        codigo: "XW01I",
+        nome: "FS 606 A",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/XW01I",
+        airbnb: "https://www.airbnb.com.br/rooms/1458691704851679963?guests=1&adults=1&s=67&unique_share_id=d29e8cee-5210-40ea-99be-3004618f4ea3",
+        booking: "https://www.booking.com/hotel/br/fortaleza-sul-alto-padrao.pt-br.html",
+        decolar: "https://www.decolar.com/accommodations/detail/6298258/2026-06-23/2026-06-26/2?user_searched_gid=CIT_2302&selected_room_pack=217005905&searchId=1f71ce26-5e65-4bd5-978a-52c3288e9ead&throughResults=true&fromViewMode=hybrid&viewModeSubclassification=hybrid-list&isMapCommanding=true&currency=BRL",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/ba8b1e5f35894ce89820ec6f3f785c58"
+      },
+      {
+        codigo: "XW02I",
+        nome: "FS 406 A",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/XW02I",
+        airbnb: "https://www.airbnb.com.br/rooms/1592059060219417943?guests=1&adults=1&s=67&unique_share_id=d3b67335-dc59-458f-a039-36c16aea9633",
+        booking: "https://www.booking.com/hotel/br/fortaleza-sul-alto-padrao.pt-br.html",
+        decolar: "https://www.decolar.com/accommodations/detail/6298258/2026-06-23/2026-06-26/2?user_searched_gid=CIT_2302&selected_room_pack=217005905&searchId=1f71ce26-5e65-4bd5-978a-52c3288e9ead&throughResults=true&fromViewMode=hybrid&viewModeSubclassification=hybrid-list&isMapCommanding=true&currency=BRL",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/b86d2ab49b3a4d1a9953e38a8d937849"
+      },
+      {
+        codigo: "CY03J",
+        nome: "1207 B",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/CY03J",
+        airbnb: "https://www.airbnb.com.br/rooms/1592052244740829717?guests=1&adults=1&s=67&unique_share_id=66bd4312-f6d4-4a4e-8360-deb1c39944fa",
+        booking: "https://www.booking.com/hotel/br/fortaleza-sul-alto-padrao.pt-br.html",
+        decolar: "https://www.decolar.com/accommodations/detail/6298258/2026-06-23/2026-06-26/2?user_searched_gid=CIT_2302&selected_room_pack=217005905&searchId=1f71ce26-5e65-4bd5-978a-52c3288e9ead&throughResults=true&fromViewMode=hybrid&viewModeSubclassification=hybrid-list&isMapCommanding=true&currency=BRL",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/0185495eab384f9aab0d71aa098fd328"
+      },
+      {
+        codigo: "HD01J",
+        nome: "FS 308 C",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/HD01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1632593522576127560?guests=1&adults=1&s=67&unique_share_id=1962f13d-d41f-4d03-a880-0dab6ee019e8",
+        booking: "https://www.booking.com/hotel/br/fortaleza-sul-alto-padrao.pt-br.html",
+        decolar: "https://www.decolar.com/accommodations/detail/6298258/2026-06-23/2026-06-26/2?user_searched_gid=CIT_2302&selected_room_pack=217005905&searchId=1f71ce26-5e65-4bd5-978a-52c3288e9ead&throughResults=true&fromViewMode=hybrid&viewModeSubclassification=hybrid-list&isMapCommanding=true&currency=BRL",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/c25393eee60b43e8ba4b9e90918730be"
       }
     ]
   },
@@ -127,3 +169,4 @@ const PROPRIETARIOS = {
   //   ]
   // },
 };
+
