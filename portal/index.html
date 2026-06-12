@@ -1,9 +1,19 @@
+Aqui está o conteúdo completo para colar no `portal/index.html` (substitua todo o conteúdo do arquivo):
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal do Proprietário · Holiday Stays</title>
+  <link rel="icon" type="image/png" href="../icon.png" />
+  <link rel="apple-touch-icon" href="../icon.png" />
+  <meta property="og:title" content="Portal do Proprietário · Holiday Stays" />
+  <meta property="og:description" content="Acesse as informações do seu imóvel" />
+  <meta property="og:image" content="https://portal.holidaystays.online/icon.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -61,7 +71,11 @@
     .investor-card { background: var(--teal-light); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 14px; }
     .investor-card .inv-icon { font-size: 2rem; flex-shrink: 0; }
     .investor-card p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.4; }
-    .login-info-box { background: var(--teal-light); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+    footer { max-width: 720px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+    footer a { color: var(--teal); text-decoration: none; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .login-info-box { margin-top: 4px; background: var(--teal-light); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
     .login-info-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
     .login-info-header .info-badge { width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: #fff; font-size: .75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .login-info-header span { font-size: .82rem; font-weight: 700; color: var(--teal-dark); }
@@ -69,17 +83,13 @@
     .login-step { display: flex; align-items: flex-start; gap: 9px; font-size: .82rem; color: var(--text); line-height: 1.45; }
     .login-step .step-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
     .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
-    footer { max-width: 720px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
-    footer a { color: var(--teal); text-decoration: none; }
-    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
-    .toast.show { transform: translateX(-50%) translateY(0); }
     .hidden { display: none !important; }
     @media (max-width: 500px) { header { padding: 20px 18px; } .container { padding: 0 14px; } .cred-grid { grid-template-columns: 1fr; } .selector { padding: 0 14px; } }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
+    <img src="../logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
     <div class="header-text">
       <h1 id="header-title">Portal do Proprietário</h1>
       <p id="header-sub">Carregando...</p>
@@ -97,7 +107,7 @@
     <p style="margin-top:10px; color:#9AAAB8;">© Holiday Stays · Grupo Booking Fortaleza LTDA</p>
   </footer>
   <div class="toast" id="toast">✓ Copiado!</div>
-  <script src="proprietarios.js"></script>
+  <script src="../proprietarios.js"></script>
   <script>
     const slug = location.pathname.replace(/\/$/, '').split('/').pop();
     const p = PROPRIETARIOS[slug];
@@ -240,3 +250,6 @@
   </script>
 </body>
 </html>
+```
+
+Cole isso no editor do GitHub substituindo todo o conteúdo do `portal/index.html` e faça commit na `main`.
