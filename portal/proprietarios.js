@@ -149,6 +149,48 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── BIA JORDÃO ──────────────────────────────────────────────
+  "bia": {
+    nome: "Bia Jordão",
+    email: "biajordao2011@hotmail.com",
+    senha: "Booking@2703",
+    imoveis: [
+      {
+        codigo: "CI07J",
+        nome: "BCM 2703",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/CI07J",
+        airbnb: "https://www.airbnb.com.br/rooms/1543445975513428262?guests=1&adults=1&s=67&unique_share_id=7fe0b29f-9d65-4d91-b556-61e345196913",
+        booking: "https://www.booking.com/Share-fK56IH",
+        decolar: "",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/4a5ee280086a4d7491ca417ec21ad4b7"
+      },
+      {
+        codigo: "JT03J",
+        nome: "AO 903",
+        endereco: "Av. Historiador Raimundo Girão, 860 - Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/JT03J",
+        airbnb: "https://www.airbnb.com.br/rooms/1696539700951825424?guests=1&adults=1&s=67&unique_share_id=33a63c8a-8fc9-4981-8066-ea82820437ae",
+        booking: "https://www.booking.com/Share-BNnK8Xe",
+        decolar: "",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/66ef590d58e74e6d9bb836789a448272"
+      },
+      {
+        codigo: "JT04J",
+        nome: "AO 1502",
+        endereco: "Av. Historiador Raimundo Girão, 860 - Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/JT04J",
+        airbnb: "https://www.airbnb.com.br/rooms/1696516308257231471?guests=1&adults=1&s=67&unique_share_id=d8e61d23-665c-4da1-851c-ccfa21c59bb7",
+        booking: "https://www.booking.com/Share-BNnK8Xe",
+        decolar: "",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/0d91b3aee1ae4f68a228850f5b7f2828"
+      }
+    ]
+  },
+
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "carlos": {
   //   nome: "Carlos",
@@ -169,4 +211,3 @@ const PROPRIETARIOS = {
   //   ]
   // },
 };
-
