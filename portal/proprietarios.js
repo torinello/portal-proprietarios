@@ -4,8 +4,8 @@
 // ============================================================
 const PROPRIETARIOS = {
   // ── BRUNA ──────────────────────────────────────────────────
-  "bruna": {
-    nome: "Bruna",
+  "bruna-oliveira": {
+    nome: "Bruna Deizy Fernandes Lima de Oliveira",
     email: "brunanegociotrabalho@gmail.com",
     senha: "Booking@BrunaFS1",
     imoveis: [
@@ -46,8 +46,8 @@ const PROPRIETARIOS = {
   },
 
   // ── FÁTIMA ─────────────────────────────────────────────────
-  "fatima": {
-    nome: "Fátima",
+  "fatima-almeida": {
+    nome: "Maria de Fátima da Costa Almeida",
     email: "ma1lima@hotmail.com",
     senha: "Booking@1503BCM",
     imoveis: [
@@ -66,8 +66,8 @@ const PROPRIETARIOS = {
   },
 
   // ── RODRIGO ────────────────────────────────────────────────
-  "rodrigo": {
-    nome: "Rodrigo",
+  "rodrigo-viana": {
+    nome: "Rodrigo Manoel Pereira Viana",
     email: "rodrigo@rvianarep.com.br",
     senha: "Booking@2001",
     imoveis: [
@@ -192,10 +192,10 @@ const PROPRIETARIOS = {
   },
 
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
-  // "carlos": {
-  //   nome: "Carlos",
-  //   email: "carlos@email.com",
-  //   senha: "Booking@Carlos1",
+  // "nome-sobrenome": {
+  //   nome: "Nome Completo do Proprietário",
+  //   email: "email@email.com",
+  //   senha: "Booking@Senha1",
   //   imoveis: [
   //     {
   //       codigo: "AB01J",
