@@ -139,7 +139,8 @@
           });
           lista.appendChild(btn);
         });
-        lista.querySelector('.apto-btn').click();
+        // Não seleciona automaticamente nenhum imóvel — a página fica
+        // parada na lista de seleção até o usuário clicar em um apartamento.
       }
     }
     function renderImovel(im, p) {
