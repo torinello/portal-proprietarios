@@ -13,75 +13,104 @@
   <meta property="og:image:height" content="512" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --teal: #2AADA4; --teal-dark: #1E8A84; --teal-deeper: #156460;
-      --teal-light: #E6F5F4; --black: #1A1A1A; --text: #1A1A1A;
+      --teal: #2AADA4; --teal-dark: #0F6E56; --teal-deeper: #085041;
+      --teal-light: #E1F5EE; --teal-text-on-dark: #E1F5EE; --teal-sub-on-dark: #9FE1CB;
+      --black: #1A1A1A; --text: #1A1A1A;
       --muted: #6B7A7A; --border: #C8E0DE; --bg: #F2F8F8; --white: #FFFFFF;
-      --radius: 12px; --shadow: 0 2px 10px rgba(42,173,164,.10);
+      --radius: 12px; --radius-sm: 9px; --shadow: 0 2px 10px rgba(42,173,164,.10);
+      --font-display: 'Fraunces', serif;
     }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 0 0 60px; }
     header { background: var(--white); padding: 28px 32px 22px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 2px 12px rgba(42,173,164,.12); border-bottom: 3px solid var(--teal); }
     header img { height: 72px; object-fit: contain; }
     .header-text { text-align: center; }
-    .header-text h1 { font-size: 1.1rem; font-weight: 600; color: var(--teal-dark); }
-    .header-text p { font-size: .8rem; color: var(--muted); margin-top: 2px; }
-    .selector { max-width: 720px; margin: 30px auto 0; padding: 0 20px; }
-    .selector-title { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: var(--muted); margin-bottom: 12px; }
-    .apto-btn { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); text-decoration: none; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; }
-    .apto-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(42,173,164,.16); }
-    .apto-btn.active { border: 2px solid var(--teal); }
-    .apto-btn .code { background: var(--teal); color: #fff; border-radius: 7px; padding: 6px 12px; font-size: .8rem; font-weight: 700; flex-shrink: 0; }
-    .apto-btn .info { flex: 1; }
-    .apto-btn .info .nome { font-size: .95rem; font-weight: 700; color: var(--black); }
+    .header-text h1 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--teal-deeper); }
+    .header-text p { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+
+    .wrap { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+
+    /* SELETOR DE IMÓVEIS */
+    .selector { margin: 28px 0 0; }
+    .selector-title { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 12px; }
+    .apto-btn { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--white); border-radius: var(--radius); border: 1.5px solid var(--border); text-decoration: none; margin-bottom: 8px; transition: border-color .15s; cursor: pointer; width: 100%; text-align: left; font-family: inherit; }
+    .apto-btn:hover { border-color: var(--teal); }
+    .apto-btn.active { border-color: var(--teal-dark); border-width: 1.5px; }
+    .apto-btn .code { background: var(--teal-light); color: var(--teal-deeper); border-radius: 7px; padding: 6px 10px; font-size: .78rem; font-weight: 600; flex-shrink: 0; }
+    .apto-btn.active .code { background: var(--teal-dark); color: #fff; }
+    .apto-btn .info { flex: 1; min-width: 0; }
+    .apto-btn .info .nome { font-size: .95rem; font-weight: 600; color: var(--black); }
     .apto-btn .info .end { font-size: .76rem; color: var(--muted); margin-top: 2px; }
-    .apto-btn .arr { color: var(--teal); }
-    .container { max-width: 720px; margin: 30px auto 0; padding: 0 20px; display: flex; flex-direction: column; gap: 22px; }
-    .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
-    .card-header { display: flex; align-items: center; gap: 10px; padding: 16px 22px 14px; border-bottom: 1px solid var(--border); }
-    .card-header .icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-    .card-header h2 { font-size: .95rem; font-weight: 700; color: var(--text); }
-    .card-header .subtitle { font-size: .77rem; color: var(--muted); margin-top: 1px; }
-    .card-body { padding: 18px 22px; display: flex; flex-direction: column; gap: 12px; }
-    .info-row { display: flex; flex-direction: column; gap: 3px; }
-    .info-row label { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
-    .info-row .value { font-size: .95rem; font-weight: 500; word-break: break-all; }
-    .link-btn { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .88rem; transition: opacity .15s, transform .1s; border: none; cursor: pointer; }
-    .link-btn:hover { opacity: .88; transform: translateY(-1px); }
-    .link-btn .btn-icon { width: 32px; height: 32px; border-radius: 7px; background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .link-btn .btn-label { flex: 1; }
-    .link-btn .btn-label small { display: block; font-weight: 400; opacity: .8; font-size: .75rem; margin-top: 1px; }
-    .link-btn .arrow { font-size: .9rem; opacity: .7; }
-    .btn-hs       { background: var(--teal);        color: #fff; }
-    .btn-airbnb   { background: #FF5A5F;             color: #fff; }
-    .btn-booking  { background: #003580;             color: #fff; }
-    .btn-decolar  { background: #E87722;             color: #fff; }
-    .btn-video    { background: var(--black);        color: #fff; }
-    .btn-owner    { background: var(--teal-dark);    color: #fff; }
-    .btn-investor { background: var(--teal-deeper);  color: #fff; }
-    .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .cred-box { background: var(--teal-light); border-radius: 9px; padding: 13px 16px; }
-    .cred-box label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--teal-dark); }
-    .cred-box .cred-value { font-size: .9rem; font-weight: 600; color: var(--black); margin-top: 4px; display: flex; align-items: center; justify-content: space-between; gap: 6px; word-break: break-all; }
-    .cred-box .copy-btn { background: none; border: none; cursor: pointer; padding: 2px 5px; border-radius: 5px; color: var(--teal-dark); font-size: .8rem; transition: background .15s; flex-shrink: 0; }
-    .cred-box .copy-btn:hover { background: rgba(42,173,164,.15); }
-    .investor-card { background: var(--teal-light); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 14px; }
-    .investor-card .inv-icon { font-size: 2rem; flex-shrink: 0; }
-    .investor-card p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.4; }
-    footer { max-width: 720px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+    .apto-btn .arr { color: var(--muted); font-size: 1rem; flex-shrink: 0; }
+
+    /* IMÓVEL SELECIONADO - cabeçalho */
+    .imovel-atual { display: flex; align-items: center; gap: 12px; margin: 24px 0 16px; padding: 0 2px; }
+    .imovel-atual .code { background: var(--teal-light); color: var(--teal-deeper); border-radius: 7px; padding: 6px 10px; font-size: .78rem; font-weight: 600; flex-shrink: 0; }
+    .imovel-atual .info .nome { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--black); }
+    .imovel-atual .info .end { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+
+    .container { display: flex; flex-direction: column; gap: 20px; }
+
+    /* CARDS DE PAINÉIS */
+    .panel-card { border-radius: var(--radius); padding: 20px; }
+    .panel-card.owner { background: var(--white); border: 1px solid var(--border); }
+    .panel-card.investor { background: var(--teal-deeper); }
+    .panel-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .panel-head .picon { font-size: 1.1rem; line-height: 1; }
+    .panel-head h2 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; }
+    .panel-card.owner h2 { color: var(--black); }
+    .panel-card.investor h2 { color: var(--teal-text-on-dark); }
+    .panel-desc { font-size: .86rem; line-height: 1.55; margin-bottom: 16px; }
+    .panel-card.owner .panel-desc { color: var(--muted); }
+    .panel-card.investor .panel-desc { color: var(--teal-sub-on-dark); }
+    .panel-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; border-radius: var(--radius-sm); font-size: .9rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: opacity .15s; }
+    .panel-btn:hover { opacity: .9; }
+    .panel-btn.outline { background: transparent; color: var(--black); border: 1.5px solid var(--border); }
+    .panel-btn.solid { background: var(--teal-light); color: var(--teal-deeper); }
+
+    /* LOGIN DE ACESSO */
+    .login-block { border-top: 1px solid var(--border); margin-top: 16px; padding-top: 14px; }
+    .login-block .label { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 10px; }
+    .login-row { display: flex; flex-direction: column; gap: 10px; }
+    .login-field { display: flex; flex-direction: column; gap: 4px; }
+    .login-field + .login-field { border-top: 1px solid var(--border); padding-top: 10px; }
+    .login-field .flabel { font-size: .72rem; color: var(--muted); }
+    .login-field .frow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .login-field .fval { font-size: .9rem; font-weight: 500; word-break: break-all; }
+    .login-field .fval.masked { letter-spacing: 2px; }
+    .icon-btn { display: flex; align-items: center; justify-content: center; background: none; border: none; cursor: pointer; padding: 4px; border-radius: 6px; color: var(--muted); flex-shrink: 0; transition: background .15s, color .15s; }
+    .icon-btn:hover { background: var(--teal-light); color: var(--teal-deeper); }
+    .icon-actions { display: flex; gap: 2px; }
+
+    /* SEÇÕES DE LINKS */
+    .section-title { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
+    .links-list { display: flex; flex-direction: column; gap: 8px; }
+    .ext-link { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); text-decoration: none; color: var(--black); font-size: .9rem; font-weight: 500; background: var(--white); transition: border-color .15s; }
+    .ext-link:hover { border-color: var(--teal); }
+    .ext-link img.favicon { width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; }
+    .ext-link .ico-fallback { width: 18px; height: 18px; border-radius: 4px; background: var(--teal-light); color: var(--teal-deeper); display: flex; align-items: center; justify-content: center; font-size: .85rem; flex-shrink: 0; }
+    .ext-link .arrow { margin-left: auto; color: var(--muted); font-size: .85rem; flex-shrink: 0; }
+
+    /* ESTADO VAZIO */
+    .empty-state { background: var(--teal-light); border-radius: var(--radius); padding: 18px; text-align: center; }
+    .empty-state .eicon { font-size: 1.4rem; margin-bottom: 6px; }
+    .empty-state p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.5; }
+
+    /* ERRO */
+    .error-box { max-width: 520px; margin: 60px auto 0; padding: 0 20px; text-align: center; }
+    .error-box .eicon { font-size: 2.2rem; margin-bottom: 12px; }
+    .error-box h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; color: var(--teal-deeper); margin-bottom: 8px; }
+    .error-box p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+    .error-box a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
+
+    footer { max-width: 520px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
     footer a { color: var(--teal); text-decoration: none; }
-    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; display: flex; align-items: center; gap: 8px; }
     .toast.show { transform: translateX(-50%) translateY(0); }
-    .login-info-box { margin-top: 4px; background: var(--teal-light); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
-    .login-info-header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
-    .login-info-header .info-badge { width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: #fff; font-size: .75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .login-info-header span { font-size: .82rem; font-weight: 700; color: var(--teal-dark); }
-    .login-info-body { padding: 0 14px 12px; display: flex; flex-direction: column; gap: 7px; }
-    .login-step { display: flex; align-items: flex-start; gap: 9px; font-size: .82rem; color: var(--text); line-height: 1.45; }
-    .login-step .step-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
-    .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
     .hidden { display: none !important; }
-    @media (max-width: 500px) { header { padding: 20px 18px; } .container { padding: 0 14px; } .cred-grid { grid-template-columns: 1fr; } .selector { padding: 0 14px; } }
+    @media (max-width: 500px) { header { padding: 20px 18px; } .wrap, footer, .error-box { padding: 0 14px; } }
   </style>
 </head>
 <body>
@@ -92,28 +121,53 @@
       <p id="header-sub">Carregando...</p>
     </div>
   </header>
-  <div class="selector hidden" id="selector">
-    <div class="selector-title">Selecione o apartamento</div>
-    <div id="apto-lista"></div>
+
+  <div class="wrap">
+    <div class="selector hidden" id="selector">
+      <div class="selector-title">Selecione o imóvel</div>
+      <div id="apto-lista"></div>
+    </div>
+
+    <div class="imovel-atual hidden" id="imovel-atual"></div>
+
+    <div class="container hidden" id="conteudo"></div>
   </div>
-  <div class="container hidden" id="conteudo"></div>
+
+  <div class="error-box hidden" id="error-box">
+    <div class="eicon">🔍</div>
+    <h2>Proprietário não encontrado</h2>
+    <p>
+      Não conseguimos localizar este link de acesso.<br>
+      Por favor, entre em contato pelo
+      <a href="https://wa.me/558535145116" target="_blank">WhatsApp</a>
+      ou e-mail <a href="mailto:info@bookingfortaleza.com">info@bookingfortaleza.com</a>
+      para que possamos verificar o link correto.
+    </p>
+  </div>
+
   <footer>
     <p>📞 <a href="tel:+558535145116">(85) 3514-5116</a> &nbsp;|&nbsp;
        📱 <a href="https://wa.me/558535145116" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
        ✉️ <a href="mailto:info@bookingfortaleza.com">info@bookingfortaleza.com</a></p>
     <p style="margin-top:10px; color:#9AAAB8;">© Holiday Stays · Grupo Booking Fortaleza LTDA</p>
   </footer>
-  <div class="toast" id="toast">✓ Copiado!</div>
+
+  <div class="toast" id="toast"><span>✓</span><span id="toast-msg">Copiado!</span></div>
+
   <script src="../proprietarios.js"></script>
   <script>
     const slug = location.pathname.replace(/\/$/, '').split('/').pop();
     const p = PROPRIETARIOS[slug];
+
     if (!p) {
-      document.getElementById('header-title').textContent = 'Proprietário não encontrado';
-      document.getElementById('header-sub').textContent = 'Verifique o link recebido';
+      document.querySelector('header').classList.add('hidden');
+      document.getElementById('error-box').classList.remove('hidden');
     } else {
-      document.getElementById('header-title').textContent = `Olá, ${p.nome}! 👋`;
-      document.getElementById('header-sub').textContent = `${p.imoveis.length} imóvel${p.imoveis.length > 1 ? 'eis' : ''} cadastrado${p.imoveis.length > 1 ? 's' : ''}`;
+      document.getElementById('header-title').textContent = `Olá, ${p.nome}`;
+      document.getElementById('header-sub').textContent = p.imoveis.length > 1
+        ? `${p.imoveis.length} imóveis cadastrados`
+        : `${p.imoveis.length} imóvel cadastrado`;
+
       if (p.imoveis.length === 1) {
         renderImovel(p.imoveis[0], p);
       } else {
@@ -121,9 +175,9 @@
         const lista = document.getElementById('apto-lista');
         selector.classList.remove('hidden');
         p.imoveis.forEach((im) => {
-          const btn = document.createElement('a');
+          const btn = document.createElement('button');
           btn.className = 'apto-btn';
-          btn.href = '#';
+          btn.type = 'button';
           btn.innerHTML = `
             <span class="code">${im.codigo}</span>
             <div class="info">
@@ -131,116 +185,150 @@
               <div class="end">${im.endereco}</div>
             </div>
             <span class="arr">→</span>`;
-          btn.addEventListener('click', e => {
-            e.preventDefault();
+          btn.addEventListener('click', () => {
             document.querySelectorAll('.apto-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             renderImovel(im, p);
           });
           lista.appendChild(btn);
         });
-        // Não seleciona automaticamente nenhum imóvel — a página fica
-        // parada na lista de seleção até o usuário clicar em um apartamento.
+        // Nenhum imóvel é pré-selecionado: a página permanece na lista
+        // de seleção até o usuário clicar em um apartamento.
       }
     }
+
     function renderImovel(im, p) {
+      // Cabeçalho com código + nome + endereço do imóvel selecionado
+      const ia = document.getElementById('imovel-atual');
+      ia.classList.remove('hidden');
+      ia.innerHTML = `
+        <span class="code">${im.codigo}</span>
+        <div class="info">
+          <div class="nome">${im.nome}</div>
+          <div class="end">${im.endereco}</div>
+        </div>`;
+
       const c = document.getElementById('conteudo');
       c.classList.remove('hidden');
-      const linkBtn = (cls, icon, label, sub, href) =>
-        href ? `<a class="link-btn ${cls}" href="${href}" target="_blank">
-          <div class="btn-icon">${icon}</div>
-          <div class="btn-label">${label}<small>${sub}</small></div>
-          <span class="arrow">↗</span>
-        </a>` : '';
-      const linksAnuncio = [
-        linkBtn('btn-hs',      '🌐', 'Ver no site Holiday Stays', 'holidaystays.net', im.holidaystays),
-        linkBtn('btn-airbnb',  '🏡', 'Ver no Airbnb',             'airbnb.com.br',    im.airbnb),
-        linkBtn('btn-booking', '🏨', 'Ver no Booking.com',        'booking.com',      im.booking),
-        linkBtn('btn-decolar', '✈️', 'Ver no Decolar',            'decolar.com',      im.decolar),
-        linkBtn('btn-video',   '🎥', 'Vídeo de Vistoria',         'Google Drive',     im.vistoria),
-      ].filter(Boolean).join('');
-      const investidor = im.investidor ? `
-        <div class="card">
-          <div class="card-header">
-            <div class="icon" style="background:#E6F5F4;color:#1A1A1A;">💼</div>
-            <div><h2>Portal do Investidor</h2><div class="subtitle">Acompanhe performance e retorno financeiro</div></div>
+
+      // ---- Painel do Proprietário ----
+      const ownerPanel = `
+        <div class="panel-card owner">
+          <div class="panel-head">
+            <span class="picon">📅</span>
+            <h2>Painel do proprietário</h2>
           </div>
-          <div class="card-body">
-            <div class="investor-card">
-              <div class="inv-icon">📈</div>
-              <p><strong>Acesse seu portal exclusivo</strong><br>Visualize relatórios de ocupação, rendimentos mensais e performance em tempo real.</p>
+          <div class="panel-desc">Calendário, bloqueio de datas, comprovantes de pagamento e prestação de contas dos meses encerrados.</div>
+          <a class="panel-btn outline" href="https://www.holidaystays.net/customer/pt/profile/landlord-apartments/awaiting" target="_blank">
+            Acessar painel do proprietário ↗
+          </a>
+          <div class="login-block">
+            <div class="label">Login de acesso</div>
+            <div class="login-row">
+              <div class="login-field">
+                <div class="flabel">E-mail</div>
+                <div class="frow">
+                  <span class="fval" id="cred-user">${p.email}</span>
+                  <button class="icon-btn" onclick="copyText('cred-user', 'E-mail copiado!')" title="Copiar e-mail" aria-label="Copiar e-mail">📋</button>
+                </div>
+              </div>
+              <div class="login-field">
+                <div class="flabel">Senha</div>
+                <div class="frow">
+                  <span class="fval masked" id="cred-pass" data-value="${p.senha}" data-visible="false">••••••••••</span>
+                  <div class="icon-actions">
+                    <button class="icon-btn" onclick="togglePass()" title="Mostrar senha" aria-label="Mostrar ou ocultar senha" id="eye-btn">👁️</button>
+                    <button class="icon-btn" onclick="copyText('cred-pass', 'Senha copiada!')" title="Copiar senha" aria-label="Copiar senha">📋</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            ${linkBtn('btn-investor', '💼', 'Acessar Portal do Investidor', `Dashboard · ${im.nome}`, im.investidor)}
           </div>
+        </div>`;
+
+      // ---- Portal do Investidor ----
+      const investorPanel = im.investidor ? `
+        <div class="panel-card investor">
+          <div class="panel-head">
+            <span class="picon">📈</span>
+            <h2>Portal do investidor</h2>
+          </div>
+          <div class="panel-desc">Faturamento passado e futuro, média diária, média mensal, RevPAR e análise de performance.</div>
+          <a class="panel-btn solid" href="${im.investidor}" target="_blank">
+            Acessar portal do investidor ↗
+          </a>
         </div>` : '';
-      c.innerHTML = `
-        <div class="card">
-          <div class="card-header">
-            <div class="icon" style="background:#E6F5F4;color:#2AADA4;">🏠</div>
-            <div><h2>Dados do Imóvel</h2><div class="subtitle">Informações gerais da propriedade</div></div>
-          </div>
-          <div class="card-body">
-            <div class="info-row"><label>Código</label><div class="value">${im.codigo}</div></div>
-            <div class="info-row"><label>Nome do imóvel</label><div class="value">${im.nome}</div></div>
-            <div class="info-row"><label>Localização</label><div class="value">${im.endereco}</div></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            <div class="icon" style="background:#E6F5F4;color:#156460;">📊</div>
-            <div><h2>Painel do Proprietário</h2><div class="subtitle">Acesse reservas, calendário e rendimentos</div></div>
-          </div>
-          <div class="card-body">
-            <a class="link-btn btn-owner" href="https://www.holidaystays.net/customer/pt/profile/landlord-apartments/awaiting" target="_blank">
-              <div class="btn-icon">🔐</div>
-              <div class="btn-label">Acessar Painel do Proprietário<small>holidaystays.net</small></div>
+
+      // ---- Links de anúncio (OTAs) ----
+      const otas = [
+        { url: im.holidaystays, label: 'Holiday Stays', domain: 'holidaystays.net' },
+        { url: im.airbnb,       label: 'Airbnb',         domain: 'airbnb.com' },
+        { url: im.booking,      label: 'Booking.com',    domain: 'booking.com' },
+        { url: im.decolar,      label: 'Decolar',        domain: 'decolar.com' },
+      ].filter(o => o.url);
+
+      const otaLinks = otas.map(o => `
+        <a class="ext-link" href="${o.url}" target="_blank">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=${o.domain}&sz=64" alt="" onerror="this.outerHTML='<span class=&quot;ico-fallback&quot;>🔗</span>'" />
+          ${o.label}
+          <span class="arrow">↗</span>
+        </a>`).join('');
+
+      const otaSection = otas.length ? `
+        <div>
+          <div class="section-title">Anúncio publicado em</div>
+          <div class="links-list">${otaLinks}</div>
+        </div>` : '';
+
+      // ---- Vistoria ----
+      const vistoriaSection = im.vistoria ? `
+        <div>
+          <div class="section-title">Vistoria do imóvel</div>
+          <div class="links-list">
+            <a class="ext-link" href="${im.vistoria}" target="_blank">
+              <span class="ico-fallback">🎥</span>
+              Vídeo de vistoria
               <span class="arrow">↗</span>
             </a>
-            <div class="cred-grid">
-              <div class="cred-box">
-                <label>Usuário / E-mail</label>
-                <div class="cred-value">
-                  <span id="cred-user">${p.email}</span>
-                  <button class="copy-btn" onclick="copyText('cred-user')" title="Copiar">📋</button>
-                </div>
-              </div>
-              <div class="cred-box">
-                <label>Senha</label>
-                <div class="cred-value">
-                  <span id="cred-pass">${p.senha}</span>
-                  <button class="copy-btn" onclick="copyText('cred-pass')" title="Copiar">📋</button>
-                </div>
-              </div>
-            </div>
-            <div class="login-info-box">
-              <div class="login-info-header">
-                <div class="info-badge">i</div>
-                <span>Instruções de acesso ao painel</span>
-              </div>
-              <div class="login-info-body">
-                <div class="login-step"><span class="step-icon">🌐</span><span>Acesse <a href="https://www.holidaystays.net/" target="_blank">www.holidaystays.net</a></span></div>
-                <div class="login-step"><span class="step-icon">🧑‍💼</span><span>Clique em <strong>"Painel do Proprietário"</strong> — você será redirecionado para a página de Login e Cadastrar.</span></div>
-                <div class="login-step"><span class="step-icon">🔑</span><span>Clique em <strong>"Login"</strong> e insira o e-mail e a senha acima.</span></div>
-                <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
-                <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar reservas, calendário e rendimentos.</span></div>
-              </div>
-            </div>
           </div>
-        </div>
-        ${investidor}
-        <div class="card">
-          <div class="card-header">
-            <div class="icon" style="background:#E6F5F4;color:#1E8A84;">🔗</div>
-            <div><h2>Links do Anúncio</h2><div class="subtitle">Acesse o imóvel nos portais de reservas</div></div>
-          </div>
-          <div class="card-body">${linksAnuncio}</div>
-        </div>`;
+        </div>` : '';
+
+      // ---- Estado vazio (sem nenhum link de anúncio/vistoria/investidor) ----
+      const semNada = !otas.length && !im.vistoria && !im.investidor;
+      const emptyState = semNada ? `
+        <div class="empty-state">
+          <div class="eicon">🕒</div>
+          <p>Links do anúncio e vistoria ainda não cadastrados para este imóvel.</p>
+        </div>` : '';
+
+      c.innerHTML = ownerPanel + investorPanel + otaSection + vistoriaSection + emptyState;
+
       c.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    function copyText(id) {
-      const text = document.getElementById(id).textContent.trim();
+
+    function togglePass() {
+      const el = document.getElementById('cred-pass');
+      const btn = document.getElementById('eye-btn');
+      const visible = el.getAttribute('data-visible') === 'true';
+      if (visible) {
+        el.textContent = '••••••••••';
+        el.setAttribute('data-visible', 'false');
+        btn.textContent = '👁️';
+        btn.title = 'Mostrar senha';
+      } else {
+        el.textContent = el.getAttribute('data-value');
+        el.setAttribute('data-visible', 'true');
+        btn.textContent = '🙈';
+        btn.title = 'Ocultar senha';
+      }
+    }
+
+    function copyText(id, message) {
+      const el = document.getElementById(id);
+      const text = (el.getAttribute('data-value') || el.textContent).trim();
       navigator.clipboard.writeText(text).then(() => {
         const t = document.getElementById('toast');
+        document.getElementById('toast-msg').textContent = message || 'Copiado!';
         t.classList.add('show');
         setTimeout(() => t.classList.remove('show'), 1800);
       });
