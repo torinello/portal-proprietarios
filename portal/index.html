@@ -30,7 +30,7 @@
     .header-text h1 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--teal-deeper); }
     .header-text p { font-size: .8rem; color: var(--muted); margin-top: 4px; }
 
-    .wrap { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
     /* SELETOR DE IMÓVEIS */
     .selector { margin: 28px 0 0; }
@@ -85,6 +85,16 @@
     .icon-btn:hover { background: var(--teal-light); color: var(--teal-deeper); }
     .icon-actions { display: flex; gap: 2px; }
 
+    /* INSTRUÇÕES DE ACESSO */
+    .login-info-box { margin-top: 14px; background: var(--teal-light); border-radius: var(--radius-sm); padding: 12px 14px; }
+    .login-info-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .login-info-header .info-badge { width: 22px; height: 22px; border-radius: 50%; background: var(--teal-dark); color: #fff; font-size: .72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .login-info-header span { font-size: .8rem; font-weight: 700; color: var(--teal-deeper); }
+    .login-info-body { display: flex; flex-direction: column; gap: 7px; }
+    .login-step { display: flex; align-items: flex-start; gap: 9px; font-size: .82rem; color: var(--text); line-height: 1.45; }
+    .login-step .step-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .login-step a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
+
     /* SEÇÕES DE LINKS */
     .section-title { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
     .links-list { display: flex; flex-direction: column; gap: 8px; }
@@ -100,13 +110,13 @@
     .empty-state p { font-size: .85rem; color: var(--teal-deeper); line-height: 1.5; }
 
     /* ERRO */
-    .error-box { max-width: 520px; margin: 60px auto 0; padding: 0 20px; text-align: center; }
+    .error-box { max-width: 680px; margin: 60px auto 0; padding: 0 20px; text-align: center; }
     .error-box .eicon { font-size: 2.2rem; margin-bottom: 12px; }
     .error-box h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; color: var(--teal-deeper); margin-bottom: 8px; }
     .error-box p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
     .error-box a { color: var(--teal-dark); font-weight: 600; text-decoration: none; }
 
-    footer { max-width: 520px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+    footer { max-width: 680px; margin: 30px auto 0; padding: 0 20px; text-align: center; color: var(--muted); font-size: .78rem; line-height: 1.6; }
     footer a { color: var(--teal); text-decoration: none; }
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; display: flex; align-items: center; gap: 8px; }
     .toast.show { transform: translateX(-50%) translateY(0); }
@@ -247,6 +257,19 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="login-info-box">
+            <div class="login-info-header">
+              <div class="info-badge">i</div>
+              <span>Instruções de acesso ao painel</span>
+            </div>
+            <div class="login-info-body">
+              <div class="login-step"><span class="step-icon">🌐</span><span>Acesse <a href="https://www.holidaystays.net/" target="_blank">www.holidaystays.net</a></span></div>
+              <div class="login-step"><span class="step-icon">🧑‍💼</span><span>Clique em <strong>"Painel do Proprietário"</strong> — você será redirecionado para a página de Login e Cadastrar.</span></div>
+              <div class="login-step"><span class="step-icon">🔑</span><span>Clique em <strong>"Login"</strong> e insira o e-mail e a senha acima.</span></div>
+              <div class="login-step"><span class="step-icon">✅</span><span>Pronto! Seu nome aparecerá no <strong>canto superior direito</strong> da página.</span></div>
+              <div class="login-step"><span class="step-icon">👤</span><span>Clique no seu nome para abrir o menu e acessar reservas, calendário e rendimentos.</span></div>
             </div>
           </div>
         </div>`;
