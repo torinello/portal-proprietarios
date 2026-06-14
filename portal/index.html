@@ -46,8 +46,9 @@
     .apto-btn .arr { color: var(--muted); font-size: 1rem; flex-shrink: 0; }
 
     /* IMÓVEL SELECIONADO - cabeçalho */
-    .imovel-atual { display: flex; align-items: center; gap: 12px; margin: 24px 0 0; padding: 14px 16px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
-    .imovel-atual .code { background: var(--teal-light); color: var(--teal-deeper); border-radius: 7px; padding: 6px 10px; font-size: .78rem; font-weight: 600; flex-shrink: 0; }
+    .imovel-atual-label { font-size: .8rem; font-weight: 600; color: var(--muted); margin: 24px 0 10px; }
+    .imovel-atual { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--teal-light); border: 1px solid var(--border); border-radius: var(--radius); }
+    .imovel-atual .code { background: var(--teal-dark); color: #fff; border-radius: 7px; padding: 6px 10px; font-size: .78rem; font-weight: 600; flex-shrink: 0; }
     .imovel-atual .info .nome { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--black); }
     .imovel-atual .info .end { font-size: .78rem; color: var(--muted); margin-top: 2px; }
 
@@ -128,6 +129,7 @@
       <div id="apto-lista"></div>
     </div>
 
+    <div class="imovel-atual-label hidden" id="imovel-atual-label">Imóvel selecionado</div>
     <div class="imovel-atual hidden" id="imovel-atual"></div>
 
     <div class="container hidden" id="conteudo"></div>
@@ -201,6 +203,9 @@
       // Cabeçalho com código + nome + endereço do imóvel selecionado
       const ia = document.getElementById('imovel-atual');
       ia.classList.remove('hidden');
+      if (p.imoveis.length > 1) {
+        document.getElementById('imovel-atual-label').classList.remove('hidden');
+      }
       ia.innerHTML = `
         <span class="code">${im.codigo}</span>
         <div class="info">
