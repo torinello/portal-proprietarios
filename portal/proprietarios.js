@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── RENATO MELO GOMES ─────────────────────────────────────
+  "renato-gomes": {
+    nome: "Renato Melo Gomes",
+    email: "rmgomes@ymail.com",
+    senha: "Booking@1902B",
+    imoveis: [
+      {
+        codigo: "KK01J",
+        nome: "FS 1902 B",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KK01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1709365992710553194?guests=1&adults=1&s=67&unique_share_id=bbcb2015-40c3-431a-b558-9144e22c781c",
+        booking: "https://www.booking.com/Share-KdAHkG5",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/142Xxh4nImsEwvQUbPVILl5iErIX8CAPU?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/16f1045ac1d543bd871d25665072e05d"
+      }
+    ]
+  },
+
   // ── BIA JORDÃO ──────────────────────────────────────────────
   "bia": {
     nome: "Bia Jordão",
