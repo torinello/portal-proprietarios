@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── ANA LUCIA SOUSA DE CASTRO ARARIPE ────────────────────
+  "ana-araripe": {
+    nome: "Ana Lucia Sousa de Castro Araripe",
+    email: "analuciacastro484@gmail.com",
+    senha: "Booking@1707C",
+    imoveis: [
+      {
+        codigo: "KX02J",
+        nome: "FS 1707 C",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KX02J",
+        airbnb: "https://www.airbnb.com.br/rooms/1709512105042119506?guests=1&adults=1&s=67&unique_share_id=a865052e-4600-4f49-9e9c-35ce91b13045",
+        booking: "https://www.booking.com/Share-AULs4a",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/1EId_1tofrKBZlSWJK96c4Rz_Q567lvie?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/dfaae1584d054453a86d998de770c726"
+      }
+    ]
+  },
+
   // ── RENATO MELO GOMES ─────────────────────────────────────
   "renato-gomes": {
     nome: "Renato Melo Gomes",
