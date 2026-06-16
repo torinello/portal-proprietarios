@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── FRANCISCO FERREIRA DO CARMO ───────────────────────────
+  "francisco-carmo": {
+    nome: "Francisco Ferreira do Carmo",
+    email: "francis.fcarmo@gmail.com",
+    senha: "Booking@2408",
+    imoveis: [
+      {
+        codigo: "KX01J",
+        nome: "BCM 2408",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KX01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1709613707220270218?guests=1&adults=1&s=67&unique_share_id=ba63d935-4688-4d55-b774-0377f809ac18",
+        booking: "https://www.booking.com/Share-1A81zo0",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/1ofUpoGVqOo7ESZ4ruUwxktEF46AsMPVG?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/7642ab91563a42f3baad4e36a069484c"
+      }
+    ]
+  },
+
   // ── REJANE ROLIM DOS SANTOS ───────────────────────────────
   "rejane-santos": {
     nome: "Rejane Rolim dos Santos",
