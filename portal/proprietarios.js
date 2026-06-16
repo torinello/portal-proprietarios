@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── REJANE ROLIM DOS SANTOS ───────────────────────────────
+  "rejane-santos": {
+    nome: "Rejane Rolim dos Santos",
+    email: "rejanerolim@yahoo.com.br",
+    senha: "Booking@1403B",
+    imoveis: [
+      {
+        codigo: "KY01J",
+        nome: "FS 1403 B",
+        endereco: "Rua Hil Moraes 12, Edson Queiroz · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/KY01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1709526722394289590?guests=1&adults=1&s=67&unique_share_id=4f0e1242-081d-4632-af0f-4586ecf48105",
+        booking: "https://www.booking.com/Share-KdAHkG5",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/1K0m8C8fiHVwPw6mI8JUpSg6vqS3mZpxe?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/a735977c5eeb45e1be3f7bec67ee88e2"
+      }
+    ]
+  },
+
   // ── ANA LUCIA SOUSA DE CASTRO ARARIPE ────────────────────
   "ana-araripe": {
     nome: "Ana Lucia Sousa de Castro Araripe",
