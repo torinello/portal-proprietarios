@@ -271,6 +271,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── DAYSE DE OLIVEIRA SOUZA ───────────────────────────────
+  "dayse-souza": {
+    nome: "Dayse de Oliveira Souza",
+    email: "dayse.o.souza@gmail.com",
+    senha: "Booking@505AQ",
+    imoveis: [
+      {
+        codigo: "FP01J",
+        nome: "AQ 505",
+        endereco: "R. Dragão do Mar, 345 - Praia de Iracema, Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/FP01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1603591245853746124?guests=1&adults=1&s=67&unique_share_id=f723e7ab-d3e5-4a1b-ba6c-8f069081415e",
+        booking: "https://www.booking.com/Share-fXQ82Z",
+        decolar: "https://www.decolar.com/accommodations/detail/6470084/2026-07-01/2026-07-03/2",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/7eba16eddf51400f9c8dc1fea197b855"
+      }
+    ]
+  },
+
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "nome-sobrenome": {
   //   nome: "Nome Completo do Proprietário",
