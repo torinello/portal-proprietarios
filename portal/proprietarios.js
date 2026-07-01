@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── AZIZ ARY NETO ─────────────────────────────────────────
+  "aziz-ary": {
+    nome: "Aziz Ary Neto",
+    email: "azizary@gmail.com",
+    senha: "Booking@101",
+    imoveis: [
+      {
+        codigo: "LQ01J",
+        nome: "JCN 101",
+        endereco: "Edifício Jaçanã · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/LQ01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1718969450713146917?guests=1&adults=1&s=67&unique_share_id=4dc409e3-d8b0-40fa-92d4-ccb28545f7bd",
+        booking: "https://www.booking.com/Share-UNmIqo7",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/10ToaWQOg63QO-neWAwLDh5BMbwD32wKa?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/ab88b67c92c74cecbb7c540e8cf56701"
+      }
+    ]
+  },
+
   // ── ANTONIO CLAUDIO ALVES DE ALBUQUERQUE ─────────────────
   "claudio-albuquerque": {
     nome: "Antonio Claudio Alves de Albuquerque",
