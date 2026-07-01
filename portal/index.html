@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal do Proprietário · Holiday Stays</title>
-  <link rel="icon" type="image/png" href="../icon.png" />
-  <link rel="apple-touch-icon" href="../icon.png" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <meta property="og:title" content="Portal do Proprietário · Holiday Stays" />
   <meta property="og:description" content="Acesse as informações do seu imóvel" />
   <meta property="og:image" content="https://portal.holidaystays.online/icon.png" />
@@ -103,6 +103,9 @@
     .ext-link img.favicon { width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; }
     .ext-link .ico-fallback { width: 18px; height: 18px; border-radius: 4px; background: var(--teal-light); color: var(--teal-deeper); display: flex; align-items: center; justify-content: center; font-size: .85rem; flex-shrink: 0; }
     .ext-link .arrow { margin-left: auto; color: var(--muted); font-size: .85rem; flex-shrink: 0; }
+    /* Link indisponível ("em breve") */
+    .ext-link.disabled { cursor: default; opacity: .6; pointer-events: none; border-style: dashed; }
+    .ext-link.disabled .arrow { font-size: .74rem; font-style: italic; color: var(--muted); }
 
     /* ESTADO VAZIO */
     .empty-state { background: var(--teal-light); border-radius: var(--radius); padding: 18px; text-align: center; }
@@ -126,7 +129,7 @@
 </head>
 <body>
   <header>
-    <img src="../logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
+    <img src="logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
     <div class="header-text">
       <h1 id="header-title">Portal do Proprietário</h1>
       <p id="header-sub">Carregando...</p>
@@ -166,7 +169,7 @@
 
   <div class="toast" id="toast"><span>✓</span><span id="toast-msg">Copiado!</span></div>
 
-  <script src="../proprietarios.js"></script>
+  <script src="proprietarios.js"></script>
   <script>
     const slug = location.pathname.replace(/\/$/, '').split('/').pop();
     const p = PROPRIETARIOS[slug];
@@ -288,48 +291,60 @@
         </div>` : '';
 
       // ---- Links de anúncio (OTAs) ----
-      const otas = [
+      // Sempre mostra as 4 plataformas; se não houver link cadastrado,
+      // exibe em estado desabilitado com "Disponível em breve".
+      const otaDefs = [
         { url: im.holidaystays, label: 'Holiday Stays', domain: 'holidaystays.net' },
         { url: im.airbnb,       label: 'Airbnb',         domain: 'airbnb.com' },
         { url: im.booking,      label: 'Booking.com',    domain: 'booking.com' },
         { url: im.decolar,      label: 'Decolar',        domain: 'decolar.com' },
-      ].filter(o => o.url);
+      ];
 
-      const otaLinks = otas.map(o => `
-        <a class="ext-link" href="${o.url}" target="_blank">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=${o.domain}&sz=64" alt="" onerror="this.outerHTML='<span class=&quot;ico-fallback&quot;>🔗</span>'" />
-          ${o.label}
-          <span class="arrow">↗</span>
-        </a>`).join('');
+      const otaLinks = otaDefs.map(o => {
+        if (o.url) {
+          return `
+            <a class="ext-link" href="${o.url}" target="_blank">
+              <img class="favicon" src="https://www.google.com/s2/favicons?domain=${o.domain}&sz=64" alt="" onerror="this.outerHTML='<span class=&quot;ico-fallback&quot;>🔗</span>'" />
+              ${o.label}
+              <span class="arrow">↗</span>
+            </a>`;
+        }
+        return `
+            <span class="ext-link disabled">
+              <img class="favicon" src="https://www.google.com/s2/favicons?domain=${o.domain}&sz=64" alt="" onerror="this.outerHTML='<span class=&quot;ico-fallback&quot;>🔗</span>'" />
+              ${o.label}
+              <span class="arrow">Disponível em breve</span>
+            </span>`;
+      }).join('');
 
-      const otaSection = otas.length ? `
+      const otaSection = `
         <div>
           <div class="section-title">Anúncio publicado em</div>
           <div class="links-list">${otaLinks}</div>
-        </div>` : '';
+        </div>`;
 
       // ---- Vistoria ----
-      const vistoriaSection = im.vistoria ? `
+      // Sempre mostra a seção; se não houver vídeo cadastrado,
+      // exibe em estado desabilitado com "Disponível em breve".
+      const vistoriaSection = `
         <div>
           <div class="section-title">Vistoria do imóvel</div>
           <div class="links-list">
+            ${im.vistoria ? `
             <a class="ext-link" href="${im.vistoria}" target="_blank">
               <span class="ico-fallback">🎥</span>
               Vídeo de vistoria
               <span class="arrow">↗</span>
-            </a>
+            </a>` : `
+            <span class="ext-link disabled">
+              <span class="ico-fallback">🎥</span>
+              Vídeo de vistoria
+              <span class="arrow">Disponível em breve</span>
+            </span>`}
           </div>
-        </div>` : '';
+        </div>`;
 
-      // ---- Estado vazio (sem nenhum link de anúncio/vistoria/investidor) ----
-      const semNada = !otas.length && !im.vistoria && !im.investidor;
-      const emptyState = semNada ? `
-        <div class="empty-state">
-          <div class="eicon">🕒</div>
-          <p>Links do anúncio e vistoria ainda não cadastrados para este imóvel.</p>
-        </div>` : '';
-
-      c.innerHTML = ownerPanel + investorPanel + otaSection + vistoriaSection + emptyState;
+      c.innerHTML = ownerPanel + investorPanel + otaSection + vistoriaSection;
 
       c.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
