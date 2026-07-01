@@ -149,6 +149,26 @@ const PROPRIETARIOS = {
     ]
   },
 
+  // ── ANTONIO CLAUDIO ALVES DE ALBUQUERQUE ─────────────────
+  "claudio-albuquerque": {
+    nome: "Antonio Claudio Alves de Albuquerque",
+    email: "claudioalb1961@gmail.com",
+    senha: "Booking@195",
+    imoveis: [
+      {
+        codigo: "LR01J",
+        nome: "HMW 195",
+        endereco: "Helbor My Way · Fortaleza, CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/LR01J",
+        airbnb: "",
+        booking: "https://www.booking.com/Share-zdDqZB7",
+        decolar: "https://www.decolar.com/accommodations/detail/7065302",
+        vistoria: "",
+        investidor: "https://v2.bookalyze.it/owner/7af8e01afbbf43ca824d048921f9e3d7"
+      }
+    ]
+  },
+
   // ── FRANCISCO FERREIRA DO CARMO ───────────────────────────
   "francisco-carmo": {
     nome: "Francisco Ferreira do Carmo",
