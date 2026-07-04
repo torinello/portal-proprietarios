@@ -330,7 +330,25 @@ const PROPRIETARIOS = {
       }
     ]
   },
-
+// ── FERNANDO ───────────────────────────────────────────────
+  "fernando-bcm": {
+    nome: "Fernando de Sousa Osório",
+    email: "fernandososorio@hotmail.com",
+    senha: "Booking@1009fso",
+    imoveis: [
+      {
+        codigo: "LT01J",
+        nome: "BCM - 1009",
+        endereco: "Rua Tenente Benévolo, 1489, Apartamento 1009 - Fortaleza, CE, 60160-041",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/LT01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1722438771654919945?unique_share_id=4b1ca07f-442e-4e9f-aeef-719900ae0515&viralityEntryPoint=1&s=76",
+        booking: "https://www.booking.com/Share-a4rbIgr",
+        decolar: "",
+        vistoria: "https://drive.google.com/drive/folders/1e1VCOodOl_n8PA85peyWCbGB5Hku_Ygz",
+        investidor: "https://v2.bookalyze.it/owner/489a2923b24d4e5faf3c033a83b8abdd"
+      }
+    ]
+  },
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "nome-sobrenome": {
   //   nome: "Nome Completo do Proprietário",
