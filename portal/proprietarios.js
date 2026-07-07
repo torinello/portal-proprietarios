@@ -349,6 +349,25 @@ const PROPRIETARIOS = {
       }
     ]
   },
+  // ── CRISTIANE MONTENEGRO ACCIOLY ──────────────────────────
+  "cristiane-montenegro": {
+    nome: "Cristiane Montenegro Accioly",
+    email: "cristianemontenegro5@hotmail.com",
+    senha: "Booking@605bcm",
+    imoveis: [
+      {
+        codigo: "LV02J",
+        nome: "BCM 605",
+        endereco: "Rua. Tenente Benévolo, 1489, Apto 605, Fortaleza, Ceara, CEP 60160041",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/LV02J",
+        airbnb: "https://www.airbnb.com.br/rooms/1724760549558332593?guests=1&adults=1&s=67&unique_share_id=a8b9c0e7-a0f2-4b7c-bb68-684212828ed3",
+        booking: "https://www.booking.com/hotel/br/beach-class-meireles-by-holiday-stays.pt-br.html?aid=356980&label=gog235jc-10CAsoIEIlYmVhY2gtY2xhc3MtbWVpcmVsZXMtYnktaG9saWRheS1zdGF5c0gtWANoIIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC9fK00gbAAgHSAiQzZGRmOGQ3MS1hZjc5LTQ1NmItYTVkNC00MjgwZGIxZTQ5ZTHYAgHgAgE-Share-LLcyS0%401783445887&sid=3376fc10a058cbaaf7e291c72701bc75&checkin=2026-07-07&checkout=2026-07-09&dest_id=-643612&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1783445904&srpvid=18c97c04e9bb03dc&type=total&ucfs=1&#no_availability_msg",
+        decolar: "https://www.decolar.com/alugueis-por-temporada/h-6785098/beach-class-meireles-by-holiday-stays-fortaleza?from_source=site&rid=2302&clickedPrice=BRL_298&search_id=36071273-4bee-44cb-bc73-b3ee82d6cf9f",
+        vistoria: "https://drive.google.com/drive/folders/1ZMGKBhMHPxhhS-v02erE2q_oeeVNgjZa",
+        investidor: "https://v2.bookalyze.it/owner/2f335b76c2f14dd99e767208c90aa27b"
+      }
+    ]
+  },
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "nome-sobrenome": {
   //   nome: "Nome Completo do Proprietário",
