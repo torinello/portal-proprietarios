@@ -368,6 +368,25 @@ const PROPRIETARIOS = {
       }
     ]
   },
+  // ── REGINA MARIA FERREIRA BRAGA ───────────────────────────
+  "regina-braga": {
+    nome: "Regina Maria Ferreira Braga",
+    email: "reginabraga2017@gmail.com",
+    senha: "Booking@1504bcm",
+    imoveis: [
+      {
+        codigo: "LZ01J",
+        nome: "BCM 1504",
+        endereco: "Rua Tenente Benévolo, Nº 1489, Apto 1504, Meireles, Fortaleza-CE",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/LZ01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1724892289059912896?guests=1&adults=1&s=67&unique_share_id=6ea810d0-543e-42ac-a620-f3593ce4e392",
+        booking: "https://www.booking.com/hotel/br/beach-class-meireles-by-holiday-stays.pt-br.html?aid=356980&label=gog235jc-10CAsoIEIlYmVhY2gtY2xhc3MtbWVpcmVsZXMtYnktaG9saWRheS1zdGF5c0gtWANoIIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCj9y60gbAAgHSAiQ1MTY5NTc4My1lZjg1LTRmYjYtYmI0MC0zZTgzOWU5YmM4MzPYAgHgAgE-Share-NLuIR8%401783541346&sid=3376fc10a058cbaaf7e291c72701bc75&all_sr_blocks=1463298705_431800225_0_0_0&checkin=2026-07-09&checkout=2026-07-11&dest_id=-643612&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1463298705_431800225_0_0_0&hpos=1&matching_block_id=1463298705_431800225_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1463298705_431800225_0_0_0__61600&srepoch=1783541353&srpvid=949a8db32db5030b&type=total&ucfs=1&",
+        decolar: "https://www.decolar.com/alugueis-por-temporada/h-6785098/beach-class-meireles-by-holiday-stays-fortaleza?from_source=site&rid=2302&clickedPrice=BRL_300&search_id=e2abcbd0-41cf-4fd4-b95c-4313c6394d70",
+        vistoria: "https://drive.google.com/drive/folders/19AI9aQCKb1BzdrFq-BZ5326Dv2guu4mb?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/f2d3926793714c3489a393b183fc0a6d"
+      }
+    ]
+  },
   // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
   // "nome-sobrenome": {
   //   nome: "Nome Completo do Proprietário",
