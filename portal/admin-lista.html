@@ -52,6 +52,11 @@
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: #1C2B3A; color: #fff; padding: 10px 22px; border-radius: 999px; font-size: .85rem; font-weight: 600; transition: transform .25s ease; z-index: 999; pointer-events: none; }
     .toast.show { transform: translateX(-50%) translateY(0); }
     @media (max-width: 500px) { .admin-wrap { padding: 20px 14px 60px; } .link-row { flex-wrap: wrap; } }
+
+    .nav-bar { display: flex; justify-content: center; gap: 6px; background: var(--white); padding: 10px; border-bottom: 1px solid var(--border); }
+    .nav-bar a { text-decoration: none; font-size: .82rem; font-weight: 600; color: var(--muted); padding: 7px 14px; border-radius: 8px; transition: background .15s, color .15s; }
+    .nav-bar a:hover { background: var(--teal-light); color: var(--teal-dark); }
+    .nav-bar a.active { background: var(--teal-light); color: var(--teal-dark); }
   </style>
 </head>
 <body>
@@ -59,6 +64,12 @@
     <img src="logo.png" alt="Holiday Stays" onerror="this.style.display='none'" />
     <h1>🔐 Painel Administrativo</h1>
   </header>
+
+  <nav class="nav-bar">
+    <a href="/admin">🏠 Painel</a>
+    <a href="/admin-lista" class="active">📋 Ver proprietários</a>
+    <a href="/admin-cadastro">➕ Cadastrar proprietário</a>
+  </nav>
 
   <div class="login-wrap" id="login-wrap">
     <div class="login-box">
