@@ -1,4 +1,4 @@
-/cadastro       https://portal-proprietarios-admin.vercel.app/admin       200!
-/cadastro/*     https://portal-proprietarios-admin.vercel.app/admin/:splat 200!
-/api/*          https://portal-proprietarios-admin.vercel.app/api/:splat   200!
-/*              /index.html                                                200
+/admin-cadastro       https://portal-proprietarios-admin.vercel.app/admin       200!
+/admin-cadastro/*     https://portal-proprietarios-admin.vercel.app/admin/:splat 200!
+/api/*                https://portal-proprietarios-admin.vercel.app/api/:splat   200!
+/*                    /index.html                                                200
