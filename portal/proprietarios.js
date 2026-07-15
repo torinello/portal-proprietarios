@@ -1,9 +1,9 @@
 // ============================================================
 //  PORTAL DO PROPRIETÁRIO · Holiday Stays
-//  Edite este arquivo para adicionar ou alterar proprietários
+//  Gerado automaticamente pelo painel de cadastro — não editar à mão
 // ============================================================
 const PROPRIETARIOS = {
-  // ── BRUNA ──────────────────────────────────────────────────
+  // ── BRUNA ─────────────────────────────────────────────
   "bruna-oliveira": {
     nome: "Bruna Deizy Fernandes Lima de Oliveira",
     email: "brunanegociotrabalho@gmail.com",
@@ -45,7 +45,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── FÁTIMA ─────────────────────────────────────────────────
+  // ── MARIA ─────────────────────────────────────────────
   "fatima-almeida": {
     nome: "Maria de Fátima da Costa Almeida",
     email: "ma1lima@hotmail.com",
@@ -65,7 +65,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── RODRIGO ────────────────────────────────────────────────
+  // ── RODRIGO ───────────────────────────────────────────
   "rodrigo-viana": {
     nome: "Rodrigo Manoel Pereira Viana",
     email: "rodrigo@rvianarep.com.br",
@@ -85,7 +85,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── JOÃO RIBEIRO BARROSO ───────────────────────────────────
+  // ── JOÃO ──────────────────────────────────────────────
   "joao": {
     nome: "João Ribeiro Barroso",
     email: "rosa@engexata.com.br",
@@ -149,7 +149,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── AZIZ ARY NETO ─────────────────────────────────────────
+  // ── AZIZ ──────────────────────────────────────────────
   "aziz-ary": {
     nome: "Aziz Ary Neto",
     email: "azizary@gmail.com",
@@ -169,7 +169,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── ANTONIO CLAUDIO ALVES DE ALBUQUERQUE ─────────────────
+  // ── ANTONIO ───────────────────────────────────────────
   "claudio-albuquerque": {
     nome: "Antonio Claudio Alves de Albuquerque",
     email: "claudioalb1961@gmail.com",
@@ -189,7 +189,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── FRANCISCO FERREIRA DO CARMO ───────────────────────────
+  // ── FRANCISCO ─────────────────────────────────────────
   "francisco-carmo": {
     nome: "Francisco Ferreira do Carmo",
     email: "francis.fcarmo@gmail.com",
@@ -209,7 +209,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── REJANE ROLIM DOS SANTOS ───────────────────────────────
+  // ── REJANE ────────────────────────────────────────────
   "rejane-santos": {
     nome: "Rejane Rolim dos Santos",
     email: "rejanerolim@yahoo.com.br",
@@ -229,7 +229,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── ANA LUCIA SOUSA DE CASTRO ARARIPE ────────────────────
+  // ── ANA ───────────────────────────────────────────────
   "ana-araripe": {
     nome: "Ana Lucia Sousa de Castro Araripe",
     email: "analuciacastro484@gmail.com",
@@ -249,7 +249,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── RENATO MELO GOMES ─────────────────────────────────────
+  // ── RENATO ────────────────────────────────────────────
   "renato-gomes": {
     nome: "Renato Melo Gomes",
     email: "rmgomes@ymail.com",
@@ -269,7 +269,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── BIA JORDÃO ──────────────────────────────────────────────
+  // ── BIA ───────────────────────────────────────────────
   "bia": {
     nome: "Bia Jordão",
     email: "biajordao2011@hotmail.com",
@@ -311,7 +311,7 @@ const PROPRIETARIOS = {
     ]
   },
 
-  // ── DAYSE DE OLIVEIRA SOUZA ───────────────────────────────
+  // ── DAYSE ─────────────────────────────────────────────
   "dayse-souza": {
     nome: "Dayse de Oliveira Souza",
     email: "dayse.o.souza@gmail.com",
@@ -330,7 +330,8 @@ const PROPRIETARIOS = {
       }
     ]
   },
-// ── FERNANDO ───────────────────────────────────────────────
+
+  // ── FERNANDO ──────────────────────────────────────────
   "fernando-bcm": {
     nome: "Fernando de Sousa Osório",
     email: "fernandososorio@hotmail.com",
@@ -349,7 +350,8 @@ const PROPRIETARIOS = {
       }
     ]
   },
-  // ── CRISTIANE MONTENEGRO ACCIOLY ──────────────────────────
+
+  // ── CRISTIANE ─────────────────────────────────────────
   "cristiane-montenegro": {
     nome: "Cristiane Montenegro Accioly",
     email: "cristianemontenegro5@hotmail.com",
@@ -368,7 +370,8 @@ const PROPRIETARIOS = {
       }
     ]
   },
-  // ── REGINA MARIA FERREIRA BRAGA ───────────────────────────
+
+  // ── REGINA ────────────────────────────────────────────
   "regina-braga": {
     nome: "Regina Maria Ferreira Braga",
     email: "reginabraga2017@gmail.com",
@@ -387,23 +390,24 @@ const PROPRIETARIOS = {
       }
     ]
   },
-  // ── COMO ADICIONAR NOVO PROPRIETÁRIO ───────────────────────
-  // "nome-sobrenome": {
-  //   nome: "Nome Completo do Proprietário",
-  //   email: "email@email.com",
-  //   senha: "Booking@Senha1",
-  //   imoveis: [
-  //     {
-  //       codigo: "AB01J",
-  //       nome: "Nome do Imóvel",
-  //       endereco: "Endereço completo",
-  //       holidaystays: "https://...",
-  //       airbnb: "https://...",
-  //       booking: "",
-  //       decolar: "",
-  //       vistoria: "https://...",
-  //       investidor: ""
-  //     }
-  //   ]
-  // },
+
+  // ── JOSÉ ──────────────────────────────────────────────
+  "jose-monteiro": {
+    nome: "JOSÉ MARCELO LIMA MONTEIRO",
+    email: "monteiroconsorcios@hotmail.com",
+    senha: "Booking@2212bcm",
+    imoveis: [
+      {
+        codigo: "MH01J",
+        nome: "BCM 2212",
+        endereco: "R. Tenente Benévolo, 1489 - Meireles, Fortaleza-CE, 60160-041",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/MH01J",
+        airbnb: "https://www.airbnb.com.br/rooms/1730598550039898982?guests=1&adults=1&s=67&unique_share_id=685010f6-bf7f-4fe6-ac33-093de7723cdd&source_impression_id=p3_1784141022_P3EXSDh5qKVXJ85w",
+        booking: "https://www.booking.com/hotel/br/beach-class-meireles-by-holiday-stays.pt-br.html?aid=356980&label=gog235jc-10CAsoIEIlYmVhY2gtY2xhc3MtbWVpcmVsZXMtYnktaG9saWRheS1zdGF5c0gtWANoIIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC8qnf0gbAAgHSAiRkOThhYzI0Yy01NjFmLTRiNGEtYWZlZi1iYTIyNTZjMjY1YzfYAgHgAgE&sid=3376fc10a058cbaaf7e291c72701bc75&all_sr_blocks=1463298703_431800225_2_0_0&checkin=2026-11-24&checkout=2026-11-25&dest_id=-643612&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1463298703_431800225_2_0_0&hpos=1&matching_block_id=1463298703_431800225_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1463298703_431800225_2_0_0__97000&srepoch=1784141045&srpvid=1e5a83b9cc2102c0&type=total&ucfs=1&",
+        decolar: "https://www.decolar.com/alugueis-por-temporada/h-6785098/beach-class-meireles-by-holiday-stays-fortaleza?from_source=site&rid=2302&clickedPrice=BRL_300&search_id=e2abcbd0-41cf-4fd4-b95c-4313c6394d70",
+        vistoria: "https://drive.google.com/drive/folders/1W4CaFFNoPB7Vlc850yKt74vLRlgKiNQn?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/2dc1330f283d487ab2235dac1496b938"
+      }
+    ]
+  }
 };
