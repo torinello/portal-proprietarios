@@ -407,6 +407,17 @@ const PROPRIETARIOS = {
         decolar: "https://www.decolar.com/alugueis-por-temporada/h-6785098/beach-class-meireles-by-holiday-stays-fortaleza?from_source=site&rid=2302&clickedPrice=BRL_300&search_id=e2abcbd0-41cf-4fd4-b95c-4313c6394d70",
         vistoria: "https://drive.google.com/drive/folders/1W4CaFFNoPB7Vlc850yKt74vLRlgKiNQn?usp=sharing",
         investidor: "https://v2.bookalyze.it/owner/2dc1330f283d487ab2235dac1496b938"
+      },
+      {
+        codigo: "ML02J",
+        nome: "SOL 107 D",
+        endereco: "R. Serra, 331 - Porto das Dunas, Aquiraz - CE, 61700-000",
+        holidaystays: "https://www.holidaystays.net/pt/apartment/ML02J",
+        airbnb: "https://www.airbnb.com.br/rooms/1735012458896439853?guests=1&adults=1&s=67&unique_share_id=3f87d199-75a3-41c9-80ae-dfc141e7390c",
+        booking: "https://www.booking.com/Share-ry15le",
+        decolar: "https://www.decolar.com/alugueis-por-temporada/h-7290125/solarium-residence-by-holiday-stays-aquiraz?from_source=site&rid=329&clickedPrice=BRL_undefined&search_id=1b374e50-6bd3-4673-b7e4-a78e05907e4a",
+        vistoria: "https://drive.google.com/drive/folders/1wE_2gouVt5Cfn8T7CRUqdKfTDbeZkk8c?usp=sharing",
+        investidor: "https://v2.bookalyze.it/owner/2dc1330f283d487ab2235dac1496b938"
       }
     ]
   }
